@@ -1,5 +1,7 @@
 # Grand-Hotel
 This is a basic website template of a Hotel which was designed and implemented using Basic HTML &amp; CSS
+<br>
+
 ![image](https://user-images.githubusercontent.com/97308605/209425840-d5125f6d-b917-49d4-8202-263922093cc5.png)
 <hr>
 <br>
