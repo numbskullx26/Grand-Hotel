@@ -1,0 +1,684 @@
+html {
+  /* To change the default font size to  1rem = 10px  */
+  font-size: 62.5%;
+}
+
+body {
+  /* To include the border and padding to an elements height and width */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* end of common styles */
+
+/* Navbar */
+
+/* Sidebar */
+
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  position: fixed;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.menu-icon {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.menu-icon:hover .line {
+  width: 2.5rem;
+}
+
+.line {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: black;
+  margin-bottom: 0.6rem;
+}
+
+.line-1,
+.line-3 {
+  width: 1.8rem;
+  transition: all 0.3s;
+}
+
+.social-icons-list {
+  list-style: none;
+  padding: 0;
+  /* background-color: black; */
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-link {
+  color: #777;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #deaa86;
+}
+
+.year {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+/* End of Sidebar */
+
+/* Navigation */
+.navigation {
+  position: fixed;
+  left: -32rem;
+  width: 40rem;
+  height: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(34, 32, 41, 1),
+      rgba(34, 32, 41, 0.8)
+    ),
+    url(./img/nav-bg.jpeg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: left 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+/* .navigation-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+} */
+.navigation-heading {
+  font-family: "Josefin Sans", sans-serif;
+  color: #deaa86;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.navigation-search {
+  position: relative;
+}
+
+.navigation-search-input {
+  padding: 1rem 2rem;
+  width: 30rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #deaa86;
+  letter-spacing: 0.1rem;
+  border: 0.1rem solid #555;
+  border-radius: 10rem;
+  outline: none;
+}
+
+.navigation-search-input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navigation-search-btn {
+  border: none;
+  color: #deaa86;
+  background: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.navigation-search-btn:focus {
+  outline: none;
+}
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  height: 28rem;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-item {
+  position: relative;
+}
+.navigation-link {
+  text-decoration: none;
+  color: #eee;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+
+/* The ::before pseudo-element can be used to insert some content before the content of an element. */
+
+.navigation-link::before {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  transition: width 0.5s;
+}
+
+.navigation-link::after {
+  content: "";
+  background-color: #deaa86;
+  width: 0rem;
+  height: 0.1rem;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  transition: width 0.5s;
+}
+
+.navigation-link:hover {
+  color: #deaa86;
+}
+
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+  width: 3rem;
+}
+
+.copyright {
+  color: #eee;
+  font-size: 1.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 12rem;
+  margin-left: 4rem;
+}
+
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+  transform: rotate(-405deg) translate(-5px, 6px);
+  width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+  transform: rotate(405deg) translate(-5px, -6px);
+  width: 2.5rem;
+}
+/* End of Navigation */
+
+/* End of Navbar */
+
+/* Header */
+.header {
+  margin-left: 8rem;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(./img/header-1.jpeg) center no-repeat;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+/* making this a flexbox for both of the two elements */
+
+.brand {
+  display: flex;
+  cursor: pointer;
+}
+
+.hotel-heading {
+  font-family: "Josefin Sans", sans-serif;
+  color: #deaa86;
+  letter-spacing: 0.2rem;
+  font-size: 2.7rem;
+  font-weight: 400;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50rem;
+  color: #eee;
+}
+
+.banner-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  animation: anim 2s;
+}
+
+.banner-paragraph {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  /* amin is the variable name in keyframes. 1.5s is the time and .5s is the delay time */
+  animation: anim 1.5s 0.5s backwards;
+}
+
+.banner-button {
+  background: linear-gradient(to right, gold, goldenrod);
+  border-radius: 10rem;
+  color: black;
+  letter-spacing: 0.1rem;
+  width: 21rem;
+  padding: 1.2rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  animation: anim 1s 0.5s backwards;
+}
+
+.banner-button:hover {
+  background: linear-gradient(to left, gold, goldenrod);
+}
+/* 
+.banner-button:active {
+  transform: translateY(0.2rem);
+} */
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+/* End of Header */
+
+/* About us */
+
+.about-us {
+  display: flex;
+  background-color: #ddd;
+  margin-left: 8rem;
+  /* flex-direction: column; */
+}
+
+.about-us-content {
+  /* flex shorthand property : grow shrink basis*/
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem;
+  box-sizing: border-box;
+}
+
+.about-us-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.about-us-images {
+  flex: 1 1;
+}
+
+.small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  color: #b85d1c;
+  margin: 0 auto 1rem auto;
+}
+
+.big-underline {
+  width: 21rem;
+  height: 0.1rem;
+  color: #b85d1c;
+}
+
+.sub-heading {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #b85d1c;
+}
+
+.about-us-paragraph {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.about-us-btn {
+  width: 15rem;
+  padding: 0.7rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: 0.1rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-arrow {
+  margin-left: 0.5rem;
+  transition: margin-left 0.4s;
+}
+
+.about-us-btn:hover .btn-arrow {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  width: 32rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid #b85d1c;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+}
+
+.image-1 {
+  transform: translate(40%, 150%);
+}
+.image-2 {
+  transform: translate(-10%, 90%);
+}
+.image-3 {
+  transform: translate(80%, 70%);
+}
+.image-4 {
+  transform: translate(20%, 30%);
+}
+/* End of About us */
+
+/* Common header */
+
+.common-header {
+  padding: 5rem;
+  color: #b85d1c;
+  text-align: center;
+}
+
+.common-heading {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+}
+
+.small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  background-color: #b85d1c;
+  margin: 0 auto 1rem auto;
+}
+
+.big-underline {
+  width: 20rem;
+  height: 0.1rem;
+  background-color: #b85d1c;
+  margin: auto;
+}
+/* End of Common header */
+
+/* rooms */
+.rooms {
+  margin-left: 8rem;
+}
+
+.room-card {
+  width: 60rem;
+  margin: 5rem;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+.rooms-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  /* justify-content: center; */
+}
+.room-img {
+  /* inherits the width of the parent container */
+  width: 100%;
+}
+
+.room-card-content {
+  color: #ddd;
+  padding: 2rem;
+}
+
+.room-card-heading {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.room-card-paragraph {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.room-price {
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: right;
+  margin: 0;
+}
+
+.room-card-btn {
+  width: 15rem;
+  padding: 0.7rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: 0.1rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.rooms-btn-wrapper {
+  text-align: center;
+}
+
+.rooms-btn {
+  width: 20rem;
+  padding: 1.5rem 1rem;
+  margin: 4rem 0rem;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #b85d1c;
+  border: 0.2rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.rooms-btn:hover {
+  color: #ddd;
+  background-color: #b85d1c;
+}
+/* end of rooms */
+
+/* customers */
+
+.customers {
+  margin-left: 8rem;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 7rem;
+}
+
+.customers-paragraph {
+  font-size: 1.8rem;
+  width: 50%;
+  color: #ddd;
+  margin: 2rem auto 8rem auto;
+  text-align: center;
+}
+
+.customer-image-wrapper {
+  margin: auto 0;
+}
+
+.customer-card-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.customer-card {
+  background-color: #eee;
+  width: 60rem;
+  display: flex;
+}
+
+.customer-image {
+  width: 20rem;
+  margin-left: -1.3rem;
+}
+
+.customer-info {
+  padding: 0.2rem;
+}
+
+.customer-fullname {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.customer-paragraph-1 {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #b85d1c;
+}
+
+.customer-paragraph-2 {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #b85d1c;
+}
+/* end of customers */
+
+.footer {
+  margin-left: 8rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main-part {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  padding: 4rem;
+}
+
+.footer-heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: goldenrod;
+  margin: 1rem 0 3rem 0;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-list-item {
+  font-size: 1.4rem;
+}
+
+.footer-list-link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  /* font-family: "Josefins Sans", sans-serif; */
+  color: #bbb;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-bottom: 4rem;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.form-input {
+  width: 25rem;
+  padding: 1rem;
+  font-family: "Josefins Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #444;
+  outline: none;
+}
+
+.form-btn {
+  padding: 1rem;
+  background-color: #b85d1c;
+  color: #ddd;
+  border: none;
+}
+
+.gallery {
+  max-width: 45rem;
+}
+
+.image-wrapper {
+  width: 12rem;
+  margin: 0.4rem;
+  overflow: hidden;
+}
+
+.footer-image {
+  width: 100%;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  height: 100%;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-image:hover {
+  transform: scale(1.3);
+  opacity: 0;
+}
